@@ -1,4 +1,4 @@
-import './style.css'
+import '/style.css'
 import WhatsApplogo from './whatsapp-fill.svg'
 import 'remixicon/fonts/remixicon.css'
 

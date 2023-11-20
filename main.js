@@ -5,10 +5,37 @@ import 'remixicon/fonts/remixicon.css'
 const contenedor = document.getElementById('app');
 
 const titulo = document.createElement('h1');
-titulo.textContent = 'Centro evaluador';
+titulo.innerHTML = 'CEDULAB <i class="ri-graduation-cap-fill"></i>';
 
 const subtitulo = document.createElement('h2');
-subtitulo.textContent = 'Tu Éxito, Nuestra Medida: Centro Evaluador, Transformando Potencial en Resultados.';
+subtitulo.innerHTML='Servicios de Consultoría Educativa y Laboral';
+
+
+const slideContenedor = document.createElement('div');
+slideContenedor.className='slider-container';
+
+const slideSubItem1 = document.createElement('div');
+slideSubItem1.className='slide';
+slideSubItem1.innerHTML='<h3>Cursos alineados en Estándares de Competencia</h3>';
+
+const slideSubItem2 = document.createElement('div');
+slideSubItem2.className='slide';
+slideSubItem2.innerHTML='<h3>Formación de Instructores, evaluadores y Verificadores Externos</h3>';
+
+const slideSubItem3 = document.createElement('div');
+slideSubItem3.className='slide';
+slideSubItem3.innerHTML='<h3>Cursos a tu medida en diferentes funciones productivas y laborales</h3>';
+
+const slideSubItem4 = document.createElement('div');
+slideSubItem4.className='slide';
+slideSubItem4.innerHTML='<h3>Certificaciones de Competencia Laboral avaladas por el CONOCER</h3>';
+
+
+
+slideContenedor.appendChild(slideSubItem1);
+slideContenedor.appendChild(slideSubItem2);
+slideContenedor.appendChild(slideSubItem3);
+slideContenedor.appendChild(slideSubItem4);
 
 
 // Funciónes
@@ -51,22 +78,23 @@ function createCard(title, imageSrc, price, contactLink, description) {
         // Ejemplo de uso
         var bodyCard1 = document.createElement('div');
         bodyCard1.className="bodyCard";
-        var card1 = createCard('curso 1', 'curso1.jpg', 29.99, 'https://wa.me/7711208704/?text=Informes%20curso1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.');
-        var card2 = createCard('curso 2', 'curso2.jpg', 39.99, 'https://wa.me/7711208704/?text=Informes%20curso2', 'Morbi blandit auctor malesuada. Praesent efficitur mollis pretium.');
-
+        var card1 = createCard('CERTIFICACION 1 EC0217.01', 'curso1.jpg', 29.99, 'https://wa.me/7711208704/?text=Informes%20curso1', 'Imparticion de cursos de formación de capital humano de manera presencial grupal.');
+        var card2 = createCard('CERTIFICACIÓN 2 EC0301', 'curso2.jpg', 39.99, 'https://wa.me/7711208704/?text=Informes%20curso2', 'Diseño de cursos de formación del capital humano de manera presencial grupal, sus instrumentos de evaluación y manuales del curso.');
+        var card3 = createCard('CERTIFICACIÓN 3 EC0091', 'curso3.jpg', 29.99, 'https://wa.me/7711208704/?text=Informes%20curso3', 'Verificación externa de la operación de los centros de evaluación y evaluadores independientes.');
         // Agregar las tarjetas al cuerpo del documento
         bodyCard1.appendChild(card1);
         bodyCard1.appendChild(card2);
+        bodyCard1.appendChild(card3);
 
 
         var bodyCard2 = document.createElement('div');
         bodyCard2.className="bodyCard";
-        var card3 = createCard('curso 3', 'curso3.jpg', 29.99, 'https://wa.me/7711208704/?text=Informes%20curso3', 'Descripción del Producto 1');
-        var card4 = createCard('curso 4', 'curso4.jpg', 39.99, 'https://wa.me/7711208704/?text=Informes%20curso4', 'Descripción del Producto 2');
-
+        
+        var card4 = createCard('CERTIFICACIÓN 4 EC0076', 'curso4.jpg', 39.99, 'https://wa.me/7711208704/?text=Informes%20curso4', 'Evaluación de la competencia de candidatos con base en Estándares de Competencia');
+        var card5 = createCard('CERTIFICACIÓN 5 EC0305', 'curso5.jpg', 39.99, 'https://wa.me/7711208704/?text=Informes%20curso5', 'Prestación de servicios de atención a clientes');
         // Agregar las tarjetas al cuerpo del documento
-        bodyCard2.appendChild(card3);
         bodyCard2.appendChild(card4);
+        bodyCard2.appendChild(card5);
 
 // Crear el botón de WhatsApp dinámicamente
 var whatsappButton = document.createElement('button');
@@ -81,5 +109,7 @@ document.body.appendChild(whatsappButton);
 // Agregar elementos al contenedor
 contenedor.appendChild(titulo);
 contenedor.appendChild(subtitulo);
+contenedor.appendChild(slideContenedor);
 contenedor.appendChild(bodyCard1);
 contenedor.appendChild(bodyCard2);
+
